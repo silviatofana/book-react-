@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { CircularProgressbar } from 'react-circular-progressbar';
 import { removingBook } from '../redux/books/books';
 
 const Book = ({
@@ -24,9 +23,6 @@ const Book = ({
         </ul>
       </div>
       <div className="book-middle-section">
-        <div className="progressbar-container">
-          <CircularProgressbar value={progress} />
-        </div>
         <div>
           <p>{`${progress}%`}</p>
           <p>Completed</p>
