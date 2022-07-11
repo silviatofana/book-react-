@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { removingBook } from '../redux/books/books';
-import 'react-circular-progressbar/dist/styles.css';
+
 
 const Book = ({
   id, title, author, genre, currentChapter, progress,
@@ -51,4 +51,3 @@ Book.propTypes = {
   progress: PropTypes.number.isRequired,
 };
 export default Book;
-
