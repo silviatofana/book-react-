@@ -1,11 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './components/bookstore.css';
+import Bookstore from './components/bookstore';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Bookstore />
+    </Router>
   </React.StrictMode>,
+  document.getElementById('root'),
 );
