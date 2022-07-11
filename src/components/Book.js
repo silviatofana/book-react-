@@ -1,38 +1,34 @@
-import React, { Component } from 'react';
-import './Books.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import BookData from './bookData';
+import Options from './options';
+import Percentage from './Percentage';
+import Progress from './Progress';
 
-class Book extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Book = (
+  {
+    id, title, author, category,
+  },
+) => (
+  <div className="Book">
+    <div>
+      <BookData title={title} author={author} category={category} />
+      <Options id={id} />
+    </div>
+    <div>
+      <Percentage />
+    </div>
+    <div>
+      <Progress />
+    </div>
+  </div>
+);
 
-  render() {
-    return (
-      <>
-        <div className="card">
-          <div className="main-area">
-            <span>Action</span>
-            <h1>The hunger games</h1>
-            <p>Unseen Content</p>
-            <ul>
-              <li>Corn</li>
-              <li>Corn</li>
-              <li>Corn</li>
-            </ul>
-          </div>
+Book.propTypes = ({
+  id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+});
 
-          <div className="main-area2">
-            <h4>64%</h4>
-          </div>
-          <div className="main-area3">
-            <h4>Current Chapter</h4>
-            <h5>Chapter 17</h5>
-            <button type="button">UPDATE CHAPTER</button>
-          </div>
-        </div>
-      </>
-    );
-  }
-}
 export default Book;
