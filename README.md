@@ -1,16 +1,16 @@
-# Microverse React Book Application Javascript
-
-> For the React Javascript milestone in building a Books Application,
-
-> set up a new repository and prepare it for development using best practices (e.g. linters).
+## Bookstore app
+This project will lay foundations for your Bookstore website. You will create a React and Redux app. You will structure your files using the "feature folder" approach. You will also set up routing using React Router.
 
 # Screenshot
 
-> This is the first [interface]()
+![Screenshot](./images/Screenshot.png)
 
-## Built with
-
-- REACT HTML & CSS
+## Built With
+- JavaScript/React
+- React Router
+- JSX
+- CSS
+  
 
 ## Link to the live page
 
@@ -68,6 +68,8 @@ To get a local copy follow these simple steps:
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
+- Microverse
+React and React Router documentation
+Stack Overflow
 
 
