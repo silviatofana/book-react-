@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { removingBook } from '../redux/books/books';
 
-
 const Book = ({
   id, title, author, genre, currentChapter, progress,
 }) => {
