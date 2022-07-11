@@ -1,0 +1,57 @@
+* {
+  list-style: none;
+  padding: 0;
+}
+
+html {
+  padding: 0 20px;
+}
+
+.Navbar,
+.Links,
+.Nav1 {
+  display: flex;
+}
+
+.Navbar,
+.Nav1 {
+  align-items: center;
+}
+
+.Navbar {
+  justify-content: space-between;
+}
+
+.Links li {
+  padding: 0 20px;
+}
+
+.FormInput {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Book {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d3d3d3;
+  background-color: #e9e7e7;
+  margin-bottom: 10px;
+  padding: 0 20px 10px 20px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.Book div {
+  width: 80%;
+}
+
+.book-title,
+.author-name {
+  width: 30%;
+}
+
+.categories,
+.submit {
+  width: 20%;
+}
