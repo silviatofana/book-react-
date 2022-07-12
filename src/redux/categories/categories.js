@@ -1,13 +1,13 @@
-const CHECK_STATUS = 'react-bookstore/category/CHECK_STATUS';
+const checkStatus = 'react-bookstore/category/checkStatus';
 const initialCategoryState = [];
 
 const category = () => ({
-  type: CHECK_STATUS,
+  type: checkStatus,
 });
 
 const categoryRed = (state = initialCategoryState, action) => {
   switch (action.type) {
-    case CHECK_STATUS:
+    case checkStatus:
       return 'UNDER CONSTRUCTION';
     default:
       return state;
@@ -15,3 +15,4 @@ const categoryRed = (state = initialCategoryState, action) => {
 };
 export { category };
 export default categoryRed;
+

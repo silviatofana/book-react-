@@ -6,6 +6,7 @@ const rootReducer = combineReducers({
   books: reduceBook,
   category: categoryRed,
 });
-const Store = configureStore({ reducer: rootReducer });
+const store = configureStore({ reducer: rootReducer });
 
-export default Store;
+export default store;
+
