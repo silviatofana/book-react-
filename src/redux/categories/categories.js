@@ -15,4 +15,3 @@ const categoryRed = (state = initialCategoryState, action) => {
 };
 export { category };
 export default categoryRed;
-
