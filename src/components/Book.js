@@ -1,10 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removingBook } from '../redux/books/books';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import { deleteBook } from '../redux/books/books';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({
-  id, title, author, genre, currentChapter, progress,
+  id, title, author, genre, progress,
 }) => {
   const dispatch = useDispatch();
 
@@ -17,20 +19,26 @@ const Book = ({
         <ul className="book-btns">
           <li>Comments</li>
           <div className="line-vertical" />
-          <li><button className="remove-btn" type="button" onClick={() => dispatch(removingBook(id))}>Remove</button></li>
+          <li><button className="remove-btn" type="button" onClick={() => dispatch(deleteBook(id))}>Remove</button></li>
           <div className="line-vertical" />
           <li>Edit</li>
         </ul>
       </div>
       <div className="book-middle-section">
+        <div className="progressbar-container">
+          <CircularProgressbar value={progress} />
+        </div>
         <div>
-          <p>{`${progress}%`}</p>
+          <p>{`${Math.floor(Math.random() * 100)}%`}</p>
           <p>Completed</p>
         </div>
       </div>
       <div className="book-right-section">
         <p>CURRENT CHAPTER</p>
-        <p>{currentChapter}</p>
+        <p>
+          Chapter
+          {` ${Math.floor(Math.random() * 10)}`}
+        </p>
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </div>
@@ -42,7 +50,6 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
-  currentChapter: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
 };
 export default Book;

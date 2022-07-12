@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addingBook } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 
 export default function Form() {
+  const itemId = uuidv4();
   const [bookTitle, setTitle] = useState('');
   const [bookAuthor, setAuthor] = useState('');
   const [bookCategory, setCategory] = useState('');
@@ -12,11 +14,12 @@ export default function Form() {
     e.preventDefault();
     if (bookTitle === '' || bookAuthor === '') return;
     const newBook = {
+      item_id: itemId,
       title: bookTitle,
       author: bookAuthor,
       category: bookCategory,
     };
-    dispatch(addingBook(newBook));
+    dispatch(postBook(newBook));
     setTitle('');
     setAuthor('');
     setCategory('');
@@ -27,6 +30,7 @@ export default function Form() {
       <form
         onSubmit={handleSubmit}
       >
+
         <input
           type="text"
           placeholder="Title"
