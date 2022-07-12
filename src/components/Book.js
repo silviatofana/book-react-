@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Books.css';
+import Forms from './Forms';
 
-class Book extends Component {
+class Books extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -31,8 +32,9 @@ class Book extends Component {
             <button type="button">UPDATE CHAPTER</button>
           </div>
         </div>
+        <Forms />
       </>
     );
   }
 }
-export default Book;
+export default Books;
