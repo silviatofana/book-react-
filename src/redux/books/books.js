@@ -36,7 +36,6 @@ const reduceBook = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK: {
       const books = Object.entries(action.payload);
-      console.log(books);
       return books.map((book) => ({
         id: book[0],
         ...book[1][0],
@@ -53,4 +52,3 @@ export {
   addingBook, removingBook, postBook, fetchBooks, deleteBook,
 };
 export default reduceBook;
-
