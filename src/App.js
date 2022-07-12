@@ -3,8 +3,8 @@ import {
   BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Books from './pages/Books';
-import Category from './pages/Category';
+import Books from './components/Books';
+import Category from './components/Category';
 
 function App() {
   return (
@@ -20,3 +20,4 @@ function App() {
 }
 
 export default App;
+
